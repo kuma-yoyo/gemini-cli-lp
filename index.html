@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIプログラミング学習コミュニティ</title>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #6366f1;
+            --background-color: #f9fafb;
+            --text-color: #374151;
+            --card-background: #ffffff;
+            --border-color: #e5e7eb;
+            --heading-color: #111827;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            background-color: var(--card-background);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--heading-color);
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--heading-color);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero .btn-large {
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+                .hero .btn-large svg {
+
+                    margin-right: 10px;
+
+                }
+
+        
+
+                                .hero-image {
+
+        
+
+                                    display: block; /* ブロック要素にして中央寄せを有効にする */
+
+        
+
+                                    margin: 0 auto 20px auto; /* 上下に20px、左右中央 */
+
+        
+
+                                    width: 200px; /* 幅を固定 */
+
+        
+
+                                    height: 200px; /* 高さを固定して正円に */
+
+        
+
+                                    object-fit: cover; /* 画像がコンテナを覆うように調整し、縦横比を維持 */
+
+        
+
+                                    border-radius: 50%; /* 画像を円形にする */
+
+        
+
+                                }
+
+                /* Features Section */
+        .features {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: var(--heading-color);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--card-background);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card svg {
+            width: 48px;
+            height: 48px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--heading-color);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-color: var(--card-background);
+            padding: 80px 0;
+            text-align: center;
+            border-radius: 16px;
+            margin: 80px auto;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--border-color);
+            margin-top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">AI-Dev Nexus</div>
+                <a href="https://discord.com/" class="btn btn-primary">Discordに参加</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <img src="./img/test.png" alt="コミュニティロゴ" class="hero-image">
+                <h1>AIプログラミングを、仲間と共に。</h1>
+                <p>初心者から経験者まで、誰もがAI技術を学び、実践し、成長できるコミュニティです。あなたのAI開発の旅はここから始まります。</p>
+                <a href="https://discord.com/" class="btn btn-primary btn-large">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879a.75.75 0 0 0 .904-.754v-2.016c0-.667.333-1.333.984-1.78a5.5 5.5 0 0 1 2.32-1.026c.333-.083.667-.167 1-.25.333-.083.667-.167 1-.25.333-.083.667-.167.984-.25a5.5 5.5 0 0 0 2.32-1.026c.651-.447.984-1.113.984-1.78V9.5a.75.75 0 0 0-.904-.754A9.954 9.954 0 0 0 12 8c-5.523 0-10 4.477-10 10a.75.75 0 0 0 .75.75h2.016c.667 0 1.333-.333 1.78-.984a5.5 5.5 0 0 1 1.026-2.32c.083-.333.167-.667.25-1 .083-.333.167-.667.25-1 .083-.333.167-.667.25-.984a5.5 5.5 0 0 0 1.026-2.32c.447-.651 1.113-.984 1.78-.984H12a.75.75 0 0 0 .75-.75V2.562A9.954 9.954 0 0 0 12 2C6.477 2 2 6.477 2 12s4.477 10 10 10z"/></svg>
+                    無料でDiscordコミュニティに参加する
+                </a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">AI-Dev Nexusでできること</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0-8.45-4.66"/><path d="M12 2a10 10 0 1 0 8.45 4.66"/><path d="M2 12h20"/><path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"/></svg>
+                        <h3>学び合いの場</h3>
+                        <p>最新の論文や技術トレンドについて議論したり、オンライン勉強会で知識を深めたり。仲間と切磋琢琢磨できる環境です。</p>
+                    </div>
+                    <div class="feature-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M12 14a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1.5"/><path d="m12 14-4 4"/><path d="M12 14a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-1.5"/><path d="m12 14 4 4"/><path d="M12 14a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1.5"/><path d="m12 14-4-4"/><path d="M12 14a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2h-1.5"/></svg>
+                        <h3>実践的なプロジェクト</h3>
+                        <p>個人やチームでAIアプリケーションを開発。ハッカソンやコンペティションに参加して、スキルを形にしましょう。</p>
+                    </div>
+                    <div class="feature-card">
+                        <svg xmlns="http://www.w3org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><path d="M12 12h-1.5a2.5 2.5 0 0 0 0 5H12"/><path d="M12 8h-1.5a2.5 2.5 0 0 0 0 5H12"/></svg>
+                        <h3>経験者によるサポート</h3>
+                        <p>行き詰まったときは、経験豊富なメンバーやメンターに質問できます。コードレビューを受けて、質の高い実装を目指しましょう。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="cta-section">
+                <h2 class="section-title">さあ、あなたもAI開発の旅へ</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 40px;">知識と情熱を共有し、未来を創造する仲間が待っています。</p>
+                <a href="https://discord.com/" class="btn btn-primary btn-large">今すぐDiscordに参加</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AI-Dev Nexus. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
